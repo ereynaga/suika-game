@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suika / Watermelon Game Clone</title>
-  <meta property="og:title" content="Suika / Watermelon Game Clone" />
-  <meta property="og:image" content="https://tombofry.github.io/suika-game/screenshot.png" />
+  <title>Suika Clone Game</title>
+  <meta property="og:title" content="Suika Clone Game" />
+  <meta property="og:image" content="https://ereynaga.github.io/suika-game/screenshot.png" />
   <style>
     @import url(https://fonts.bunny.net/css?family=azeret-mono:400,700,900);
 
@@ -55,14 +55,11 @@
     }
 
     #game-score {
-      position: absolute;
+      position: relative;
       width: 100%;
-      border-bottom: 2px dotted #333;
-      font-size: 84px;
-      font-weight: 900;
-      padding-left: 16px;
-      color: var(--col-bg-lighter);
-      text-shadow: 3px 3px 0 var(--col-primary), -3px -3px 0 var(--col-primary), -3px 3px 0 var(--col-primary), 3px -3px 0 var(--col-primary);
+      color: #333;
+      font-weight: 700;
+      font-size: 24px;
     }
 
     #game-end-container {
@@ -115,7 +112,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 48px;
+      height: 50px;
       background-color: var(--col-bg-lighter);
       display: flex;
     }
@@ -124,7 +121,7 @@
       display: flex;
       line-height: 1;
       align-items: center;
-      margin-right: 32px;
+      margin-right: 40px;
     }
 
     .game-status-label {
@@ -141,8 +138,8 @@
     }
 
     #game-next-fruit {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
     }
   </style>
 </head>
@@ -150,8 +147,6 @@
   <div class="container">
     <div id="game-canvas">
       <div id="game-ui">
-        <p id="game-score"></p>
-
         <div id="game-end-container">
           <div id="game-end">
             <div id="game-end-title">Game Over!</div>
@@ -160,6 +155,10 @@
         </div>
 
         <div id="game-status">
+          <div class="game-status-item">
+            <div class="game-status-label">Score</div>
+            <div id="game-score">0</div>
+          </div>
           <div class="game-status-item">
             <div class="game-status-label">Highscore</div>
             <div id="game-highscore-value">0</div>
